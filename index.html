@@ -18,23 +18,23 @@ var elem = document.documentElement;
 var marker = document.querySelector("#marker");
 var fullbutton = document.querySelector("#fullscreen");
 var button = document.querySelector("#mutebutton");
-var Video_1 = document.querySelector("#Video_Asset_1");
+var Video_0 = document.querySelector("#Video_Asset_0");
 marker.addEventListener("markerFound", function (evt) {
 markerFound = 1;
-Video_1.play();
+Video_0.play();
 });
 marker.addEventListener("markerLost", function (evt) {
 markerFound = 0;
-Video_1.pause();
+Video_0.pause();
 });
 button.addEventListener("click", function(evt){
 console.log("button clicked")
-if(Video_1.muted==true){
+if(Video_0.muted==true){
 button.innerHTML="Mute";
-Video_1.muted=false;
+Video_0.muted=false;
 }else{
 button.innerHTML="Unmute";
-Video_1.muted=true;
+Video_0.muted=true;
 }
 });
 fullbutton.addEventListener("click", function (evt) {
@@ -116,7 +116,9 @@ function bezierEvaluate(p0, p1, p2, p3, t) {
 
 <!-- BEGIN: Unity Compiled Assets -->
 <a-assets>
-<video id="Video_Asset_1" autoplay="false" loop crossorigin="anonymous" src="videos/drink2vedio.mp4" webkit-playsinline playsinline controls muted></video>
+<video id="Video_Asset_0" autoplay="false" loop crossorigin="anonymous" src="videos/drink2vedio.mp4" webkit-playsinline playsinline controls muted></video>
+<a-asset-item id="Model_Asset_obj_1" src="models/Donald.obj"></a-asset-item>
+<a-asset-item id="Model_Asset_mtl_1" src="models/Donald.mtl"></a-asset-item>
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
@@ -124,10 +126,10 @@ function bezierEvaluate(p0, p1, p2, p3, t) {
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-entity obj-model="obj: #Model_Asset_obj_0; mtl: #Model_Asset_mtl_0" id="Model_0" class="intersectable" scale="0.003 0.003 0.003" position="0 0 -0.291" rotation="0 0 0" color="#ffffff" transparent=False
-></a-entity>
-<a-video src="#Video_Asset_1" id="Video_1" class="intersectable" width="1" height="0.5" position="0 0.1 0.245" rotation="270 0 0" color="#FFFFFF" transparent=False
+<a-video src="#Video_Asset_0" id="Video_0" class="intersectable" width="1" height="0.5" position="0 0.1 0.245" rotation="270 0 0" color="#FFFFFF" transparent=False
 ></a-video>
+<a-entity obj-model="obj: #Model_Asset_obj_1; mtl: #Model_Asset_mtl_1" id="Model_1" class="intersectable" scale="0.003 0.003 0.003" position="0 0.103 -0.41" rotation="311.5367 0 0" color="#ffffff" transparent=False
+></a-entity>
 <!-- END: Unity Compiled Objects -->
 
 <!-- BEGIN: Bottom HTML -->
