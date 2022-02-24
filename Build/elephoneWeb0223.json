@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "ElephoneNew",
+"productVersion": "0.1",
+"dataUrl": "elephoneWeb0223.data.unityweb",
+"wasmCodeUrl": "elephoneWeb0223.wasm.code.unityweb",
+"wasmFrameworkUrl": "elephoneWeb0223.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.3f1"
+}
